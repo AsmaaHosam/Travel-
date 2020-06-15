@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Travel++</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="footerStyle.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+      
+    .jumbotron{
+          background-image: linear-gradient(to right,black ,#7C8C3C);  
+      }
+
+    .content{
+    background-color: whitesmoke;
+    width: 90%;
+    height: 700px;
+     }
+
+    .line{
+            width: 90%;
+            border-bottom: .5px solid rgba(0,0,0,0.15);
+            margin-left: 30px;     
+      }
+    .media-comments{
+          margin: 30px 0 0 30px;
+          max-width: 50%;
+      }
+      
+   .btn-primary {
+      background:#7C8C3C;
+      border-color: #7C8C3C;
+      
+  }
+
+  .breadcrumb{
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    }
+
+  .breadcrumb-item > a{
+        color: lightblue;
+      }
+
+  .profileImg{
+     max-width: 6%;
+     max-height: 6%;
+     background-size: contain;
+      }
+    
+
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    
+    <div class="container">
+      <a class="navbar-brand" href="Home.html"><img src="imgs/travel++.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav">
+          <li class="nav-pill">
+              <a class="nav-link" href="Islands.html">Marvellous Islands</a>
+          </li>
+            <li class="nav-pill">
+            <a class="nav-link" href="#">Breathtaking Adventures</a>
+          </li>
+          <li class="nav-pill">
+            <a class="nav-link" href="#" title="Email" data-toggle="popover" data-placement="bottom" data-content="travelplus@xxmail.com"> Our Contact</a>
+          </li>
+  
+      <li class="nav-item  ml-3 mt-1">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+             <a class="btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal1">Sign In</a>                  
+             <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal2">Register</a>
+            </div>
+            </li> 
+        </ul>
+      </div>
+       <!-- myModal1 -->
+      <div class="modal" id="myModal1">
+          <div class="modal-dialog">
+              <div class="modal-content" role="document">
+  
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title"> Sign In</h4>
+                      <button type="button" class="close" data-dismiss="modal">�</button>
+                  </div>
+  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <form>
+                          <label class="sr-only" for="usrname">Username</label>
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+  
+  
+                          <label class="sr-only" for="Password">Name</label>
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                              </div>
+                              <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                          </div>
+                      </form>
+                  </div>
+  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" >Sign In</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+              <!-- myModal2 -->
+        <div class="modal" id="myModal2">
+          <div class="modal-dialog">
+              <div class="modal-content" role="document">
+  
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title"> Register</h4>
+                      <button type="button" class="close" data-dismiss="modal">�</button>
+                  </div>
+  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <form>
+                          <label class="sr-only" for="usrname">Username</label>
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+  
+  
+                          <label class="sr-only" for="Password">Name</label>
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                              </div>
+                              <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                          </div>
+                      </form>
+                  </div>
+  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" >Sign up</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+              
+      </nav>
+    
+      <div class="row col-12 jumbotron">
+        <div class="container">
+            <h1 class="display-4 mt-5" style="color:white;">Santorini</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="Home.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="Honeymoon.html">Honeymoon Trips</a></li>
+                <li class="breadcrumb-item"><a href="Islands.html">Islands</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Maldives</li>
+              </ol>
+            </div>
+      </div>
+
+       <div class="row">
+            <div class="content mx-auto">
+              <div class="row">
+                <h2 class="col-12 ml-3 mt-3">Rediscover lost Sangrila</h1>
+                <p class="mt-3 ml-4 col-6" style="display: inline-block;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aut similique voluptas! Tenetur aperiam alias, officiis, perferendis accusamus, sint, error possimus quas repellendus facilis asperiores dolorem. Nostrum maiores laudantium possimus consequatur quam. Dolores placeat laudantium similique, beatae animi, vel reprehenderit! Quisquam veniam laudantium ullam eaque! Error ex cumque iure aliquam commodi voluptatibus, animi quam quas maiores, deserunt rerum, provident consequuntur!
+                  Dolor sit amet, consectetur adipisicing elit. Incidunt consequatur iusto odio quis magnam, aut assumenda ipsa magni ea, veritatis, nostrum rerum necessitatibus excepturi eos et nemo iste? Illo temporibus mollitia ducimus aspernatur numquam, sint sunt consequatur rerum aliquam odio!
+              </p>
+             <img src="imgs/headimgSAN.jpg" class="col-4 ml-auto mr-auto">
+            </div>
+     
+      <div class="row">
+        <div class="col-12 mt-3">
+      <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Climate
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+      Ideal times to visit, for milder weather, lower prices and crowds, are April-June and September-October. The period from December through March is very much the off-season and marked by colder temperatures, rain and winds. The air is usually hot and dry during the busy summer months with very little rain between May and September.    </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Hotels
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+    The top hotels in Santorini are:
+    Esperas Traditional Houses, Perivolas, Erosantorini, Astra Suites, Afroessa, Voreina Gallery Suites, Atrina Canava 1894, Aigialos Hotel, Ikies Traditional Houses, Kapari Natural Resort, Avaton Resort & Spa      </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Food </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+    Top restaurants are:
+    Anemoloos -- Exo Gonia
+    Falafeland -- Fira
+    The Athenian House -- Imerovigli
+    Kapari Wine Restaurant -- Imerovigli
+    Jaipur Palace Santorini -- Karteradhos
+    Melitini -- Oia      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      <div class="row mt-5">
+       <button class="btn btn-primary btn-lg mx-auto text-white" data-toggle="modal" data-target="#Modal1">
+         BOOK NOW</button> 
+          </div>
+        </div>
+       </div>
+      </div>
+      
+
+      <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Book Now</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              
+              <div class="progress">
+                <div class="progress-bar bg-primary" id="prgbar" role="progressbar" style="width:0%" 
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <script>
+                var prg = $('.progress-bar');
+                var prgNum = 0;
+              
+                setInterval(function(){
+                    prgNum++;
+                    prg.css('width',prgNum +'%');
+                    prg.attr('aria-valuenow', prgNum);
+                }, 30)
+                
+              </script>
+
+
+              <iframe src="https://www.booking.com/searchresults.html?label=gen173nr-1FCAEoggI46AdIM1gEaEOIAQGYATG4AQfIAQzYAQHoAQH4AQKIAgGoAgO4AovhuvUFwAIB&sid=c78549f990154dff95a8ea3f1eab9e78&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.html%3Flabel%3Dgen173nr-1FCAEoggI46AdIM1gEaEOIAQGYATG4AQfIAQzYAQHoAQH4AQKIAgGoAgO4AovhuvUFwAIB%3Bsid%3Dc78549f990154dff95a8ea3f1eab9e78%3Bsb_price_type%3Dtotal%26%3B&ss=santorini&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1" 
+              height="500px" width="770px" frameborder="0" onload="destroy()"></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     <div class="row">
+         <div class="col-6 mt-5 ml-2">
+             <h2 class="ml-4">Comments</h2>
+             <div class="line col-12"></div>
+             <div class="col-12 mt-4 ml-4">
+                <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-9 ">
+                        <input type="text" class="form-control" id="inputName"  data-placement="left" placeholder="Enter your comment">
+                      </div>
+                    <div class="form-group col-md-2 ">
+                    <button type="submit" class="btn btn-primary"  data-placement="center" title="We'd love to hear from you!">Comment</button>
+                               </div>
+                           </div>
+                  </form>
+              </div>
+           <div class="row">
+             <div class="col-12 ml-4">
+                <div class="media mt-3 ml-4">
+                    <img class="mr-3 mt-3 profileImg" src="imgs/profilePic.png" alt="Generic placeholder image">
+                    <div class="media-body">
+                    <h5 class="font-weight-bold text-sm" style="display: inline-block;">Jane Doe</h5> <small class="ml-2 font-weight-light" style="display: inline-block;"><i>Posted on February 20 2016</i></small>
+                      <p style="font-size: 13px;">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate.
+                      </p>
+                      <div class="media mt-4">
+                        <a href="#">
+                          <img src="imgs/profilePic.png" alt="Generic placeholder image" style="max-width:60%;">
+                        </a>
+                        <div class="media-body mt-2">
+                            <h6 style="display: inline-block;">Smith Dorn</h6> <small class="ml-2 font-weight-light" style="display: inline-block;"><i>Posted on February 20 2016</i></small>
+                          <p style="font-size: 10px;">Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="media mt-3 ml-4">
+                    <img class="mr-3 mt-3 profileImg" src="imgs/profilePic.png" alt="Generic placeholder image">
+                    <div class="media-body">
+                    <h5 class="font-weight-bold text-sm" style="display: inline-block;">Menna Ahmed</h5> <small class="ml-2 font-weight-light" style="display: inline-block;"><i>Posted on February 20 2016</i></small>
+                      <p style="font-size: 13px;">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate.
+                      </p>
+                    </div>
+                  </div>
+
+                
+             </div>
+            </div>
+         </div>
+     </div>
+
+
+  <!----------- Footer ------------> 
+	<footer class="footer-bs mt-5">
+    <div class="row">
+      <div class="col-md-3 footer-brand animated fadeInLeft">
+          <h2>Logo</h2>
+           <p> Lorem ipsum dolor sit amet,consectetur adipisicing elit.Consequuntur,quia,architecto?A,reiciendis eveniet!Esse est eaque adipisci natus rerum laundantium accusamus magni.</p>
+           
+        </div>
+      <div class="col-md-3  footer-brand animated fadeInLeft">
+          <h2>Quick Link</h2>
+          <p> Holiday Package <br/> Summer Adventure <br/> Bus and Transportation <br/> Ticket and Hotel <br/> Booking <br/> Trek and Hikings <br/></p>
+        </div>
+
+      <div class="col-md-3 footer-social animated fadeInDown">
+          <h2>Newsletter Signup</h2>
+          <p> Subscribe to our newsletter to get news</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </div>
+          </div>
+       
+      <div class="col-md-3 footer-social animated fadeInDown">
+          <h2>Contact Info</h2>
+    <p> Mold Discover <br/> info@moldthemes.com<br/></p>
+            <a href="#"><img src="imgs/facebook.png" alt="facebook"></a>
+            <a href="#" class="ml-2"><img src="imgs/twitter.png" alt="facebook"></a>
+    </div>
+
+
+</footer>
+</body>

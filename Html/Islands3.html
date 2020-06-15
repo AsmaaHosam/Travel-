@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Islands</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="footerStyle.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+      .body{
+        background-color: #F1F2F8;
+      }
+
+      .jumbotron{
+        background-image: linear-gradient(to right, black , #7C8C3C);
+      }
+        .card:hover{
+              box-shadow: 0 0 20px rgba(33,33,33,.2); 
+                   }
+        .bg {
+            
+            /* Full height */
+            height: 100%; 
+            }
+
+        .breadcrumb{
+            background-color: transparent;
+            border: none;
+            font-size: 12px;
+            }
+
+           .breadcrumb-item > a{
+              color: lightblue;
+            }
+
+        .alert{
+            display: none;
+        }
+        .pagination{
+            text-align: center;
+           
+        }
+
+        .page-link{
+        color: #7C8C3C;
+        }
+
+        .progress{
+            width: 1400px;
+        }
+        .btn-primary {
+          background:#7C8C3C;
+          border-color: #7C8C3C;}
+
+          .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+    </style>
+
+</head>
+<body>
+
+<div class="bg">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="Home.html"><img src="imgs/travel++.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav">
+          <li class="nav-pill">
+              <a class="nav-link" href="Islands.html">Marvellous Islands</a>
+          </li>
+            <li class="nav-pill">
+            <a class="nav-link" href="#">Breathtaking Adventures</a>
+          </li>
+          <li class="nav-pill">
+            <a class="nav-link" href="#" title="Email" data-toggle="popover" data-placement="bottom" data-content="travelplus@xxmail.com"> Our Contact</a>
+          </li>
+  
+      <li class="nav-item  ml-3 mt-1">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+             <a class="btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal1">Sign In</a>                  
+             <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal2">Register</a>
+            </div>
+            </li> 
+        </ul>
+      </div>
+       <!-- myModal1 -->
+      <div class="modal" id="myModal1">
+          <div class="modal-dialog">
+              <div class="modal-content" role="document">
+  
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title"> Sign In</h4>
+                      <button type="button" class="close" data-dismiss="modal">�</button>
+                  </div>
+  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <form>
+                          <label class="sr-only" for="usrname">Username</label>
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+  
+  
+                          <label class="sr-only" for="Password">Name</label>
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                              </div>
+                              <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                          </div>
+                      </form>
+                  </div>
+  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" >Sign In</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+              <!-- myModal2 -->
+        <div class="modal" id="myModal2">
+          <div class="modal-dialog">
+              <div class="modal-content" role="document">
+  
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title"> Register</h4>
+                      <button type="button" class="close" data-dismiss="modal">�</button>
+                  </div>
+  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <form>
+                          <label class="sr-only" for="usrname">Username</label>
+                          <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+  
+  
+                          <label class="sr-only" for="Password">Name</label>
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                              </div>
+                              <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                          </div>
+                      </form>
+                  </div>
+  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" >Sign up</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+  
+              </div>
+          </div>
+      </div>
+              
+      </nav>
+<br>
+
+ <!----------- header ------------>
+    <div class="row jumbotron jumbotron-fluid">
+      <div class="container">
+      <h1 class="display-4 text-white mt-3">Honymoon Islands</h1>
+      <p class="font-weight-light text-white">feel relax and enjpy with beuteaful countrirs and imaginaable scence.</p>
+      
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="Home.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="Honeymoon.html">Honeymoon Trips</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Islands</li>
+        </ol>
+    </div>
+  </div>
+
+   <!----------- progress bar ------------>
+     <!-- <div class="row ml-5">
+    <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated " style="width:25%" >
+        Reason for Travel "DONE"
+        </div>
+        <div class="progress-bar  progress-bar-striped progress-bar-animated " style="width:25%" >
+        Destination Category "DONE"
+        </div>
+        <div class="progress-bar  progress-bar-striped progress-bar-animated bg-warning " style="width:25%" >
+        Choose Destination "Loading"
+        </div>
+        <div class="progress-bar  progress-bar-striped progress-bar-animated" style="width:0%" >
+Book your hotel "Loading"
+        </div>
+  </div>
+    </div> --> -->
+     <!----------- cards ------------>
+<main role="main" class="container">
+    
+     <div class="card-deck mt-3 " >
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+            <img src="imgs/lombok.jpeg" class="card-img-top" />
+            <div class="card-body">
+                <h5 class="card-title text-center">Lombok</h5>
+                <p>  Check the most important points of the island so you can decide easily!</p>
+                <div class="text-left"> 
+                    <button class=" btn btn-primary mb-3" id="a1">Book Now</button>        
+                </div>
+                <div class="alert alert-primary alert-dismissable" id="alert1">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Please login first!
+        </div>
+            </div>
+        </div>
+        </div> 
+        
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+            <img src="imgs/boracay.jpg" class="card-img-top"  />
+            <div class="card-body">
+                <h5 class="card-title text-center">Boracay</h5>
+                <p>  Check the most important points of the island so you can decide easily!</p>
+                <div class="text-left"> 
+                    <button class=" btn btn-primary mb-3" id="a1">Book Now</button>        
+                </div>
+                <div class="alert alert-primary alert-dismissable" id="alert1">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Please login first!
+        </div>
+            </div>
+        </div>
+        </div> 
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+            <img src="imgs/ko.jpg" class="card-img-top" />
+            <div class="card-body">
+                <h5 class="card-title text-center">Ko Phi Phi Don</h5>
+                <p>  Check the most important points of the island so you can decide easily!</p>
+                <div class="text-left"> 
+                    <button class=" btn btn-primary mb-3" id="a1">Book Now</button>        
+                </div>
+                <div class="alert alert-primary alert-dismissable" id="alert1">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Please login first!
+        </div>
+            </div>
+        </div>
+        </div>   
+    </div> 
+
+</main>
+    <div class="row">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+           <label for="inputEmail">Email</label>
+           <input type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="form-group">
+            <label for="InputPassword1">Password</label>
+            <input type="password" class="form-control" id="InputPassword1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Sign In</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+   <!----------- pagination ------------>
+    <div class="row text-center mt-5">
+     <ul class="pagination col-12 d-flex justify-content-center">
+    <li class="page-item"><a class="page-link" href="Islands.html">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="Islands.html">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+  </ul>
+    </div>
+
+</div>
+
+
+
+
+<!----------- Footer ------------> 
+<footer class="footer-bs mt-5">
+    <div class="row">
+        <div class="col-md-3 footer-brand animated fadeInLeft">
+            <h2>Logo</h2>
+           <p> Lorem ipsum dolor sit amet,consectetur adipisicing elit.Consequuntur,quia,architecto?A,reiciendis eveniet!Esse est eaque adipisci natus rerum laundantium accusamus magni.</p>
+           
+        </div>
+        <div class="col-md-3  footer-brand animated fadeInLeft">
+            <h2>Quick Link</h2>
+            <p> Holiday Package <br/> Summer Adventure <br/> Bus and Transportation <br/> Ticket and Hotel <br/> Booking <br/> Trek and Hikings <br/></p>
+        </div>
+
+        <div class="col-md-3 footer-social animated fadeInDown">
+            <h2>Newsletter Signup</h2>
+            <p> Subscribe to our newsletter to get news</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your Email" aria-label="Your Email" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </div>
+          </div>
+       
+        <div class="col-md-3 footer-social animated fadeInDown">
+            <h2>Contact Info</h2>
+            <p> Mold Discover <br/> info@moldthemes.com<br/></p>
+            <a href="#"><img src="imgs/facebook.png" alt="facebook"></a>
+            <a href="#" class="ml-2"><img src="imgs/twitter.png" alt="facebook"></a>
+    </div>
+
+    
+</footer>
+
+
+<script>
+$(document).ready(function(){
+$('[data-toggle="popover"]').popover();   
+});
+</script>
+<script>
+$(document).ready(function(){
+$('#a2').click(function(){
+$('#alert2').show()
+}) 
+$('#a1').click(function(){
+$('#alert1').show()
+})
+$('#a3').click(function(){
+$('#alert3').show()
+}) 
+$('#a4').click(function(){
+$('#alert4').show()
+}) 
+});
+</script>
+
+</body>
+</html>
